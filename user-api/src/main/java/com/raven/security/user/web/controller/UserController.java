@@ -5,6 +5,7 @@ import com.raven.security.user.pojo.RavenUserInfo;
 import com.raven.security.user.service.IRavenUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -18,7 +19,7 @@ public class UserController {
     private IRavenUserService userService;
 
     @PostMapping("/save")
-    public RavenUserInfo create(@RequestBody RavenUserInfo userInfo) {
+    public RavenUserInfo create(@RequestBody @Validated RavenUserInfo userInfo) {
         RavenUserInfo user = this.userService.create(userInfo);
         return user;
     }

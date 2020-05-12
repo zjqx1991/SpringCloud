@@ -16,6 +16,7 @@ public class RavenUser {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    @Column(unique = true)
     private String username;
     private String password;
 

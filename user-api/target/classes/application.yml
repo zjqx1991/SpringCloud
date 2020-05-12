@@ -1,5 +1,9 @@
 server:
   port: 8001
+#  ssl:
+#    key-store: classpath:raven.key
+#    key-store-password: 123456
+#    key-password: 123456
 spring:
   application:
     name: user-api
@@ -16,9 +20,4 @@ logging:
   pattern:
     console: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%X{PtxId}] [%thread] %-5level %logger{50} - %msg%n"
 
-#server:
-#  ssl:
-#    key-store: classpath:jojo.key
-#    key-store-password: 123456
-#    key-password: 123456
 
