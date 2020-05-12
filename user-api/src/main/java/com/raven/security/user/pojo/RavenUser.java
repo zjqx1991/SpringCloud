@@ -1,6 +1,7 @@
 package com.raven.security.user.pojo;
 
 import lombok.Data;
+import org.springframework.beans.BeanUtils;
 
 import javax.persistence.*;
 
@@ -17,4 +18,10 @@ public class RavenUser {
     private String name;
     private String username;
     private String password;
+
+    public RavenUserInfo builderUserInfo() {
+        RavenUserInfo userInfo = new RavenUserInfo();
+        BeanUtils.copyProperties(this, userInfo);
+        return userInfo;
+    }
 }

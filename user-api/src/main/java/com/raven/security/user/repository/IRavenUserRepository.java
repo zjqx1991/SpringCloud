@@ -5,4 +5,7 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.repository.CrudRepository;
 
 public interface IRavenUserRepository extends JpaSpecificationExecutor<RavenUser>, CrudRepository<RavenUser, Long> {
+
+    RavenUser findByName(String username);
+
 }

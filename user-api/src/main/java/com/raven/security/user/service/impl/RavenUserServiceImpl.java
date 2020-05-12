@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 
 @Service
@@ -35,7 +36,9 @@ public class RavenUserServiceImpl implements IRavenUserService {
     }
 
     public RavenUserInfo get(Long id) {
-        return null;
+        Optional<RavenUser> optional = this.userRepository.findById(id);
+        RavenUserInfo userInfo = optional.get().builderUserInfo();
+        return userInfo;
     }
 
     public List<RavenUserInfo> query(String name) {

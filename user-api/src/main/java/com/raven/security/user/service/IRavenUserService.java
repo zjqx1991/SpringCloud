@@ -15,4 +15,6 @@ public interface IRavenUserService {
     RavenUserInfo get(Long id);
 
     List<RavenUserInfo> query(String name);
+
+
 }
