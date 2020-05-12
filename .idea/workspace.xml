@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7dd49a76-964d-468a-8be9-bd98d21ab113" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/user-api/src/main/java/com/raven/security/user/web/filter/AuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-api/src/main/java/com/raven/security/user/pojo/RavenUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-api/src/main/java/com/raven/security/user/pojo/RavenUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-api/src/main/java/com/raven/security/user/repository/IRavenUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-api/src/main/java/com/raven/security/user/repository/IRavenUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-api/src/main/java/com/raven/security/user/service/IRavenUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-api/src/main/java/com/raven/security/user/service/IRavenUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-api/src/main/java/com/raven/security/user/service/impl/RavenUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-api/src/main/java/com/raven/security/user/service/impl/RavenUserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-api/src/main/java/com/raven/security/user/web/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-api/src/main/java/com/raven/security/user/web/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-api/target/classes/com/raven/security/user/UserApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/user-api/target/classes/com/raven/security/user/UserApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-api/target/classes/com/raven/security/user/pojo/RavenUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/user-api/target/classes/com/raven/security/user/pojo/RavenUser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-api/target/classes/com/raven/security/user/pojo/RavenUserInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/user-api/target/classes/com/raven/security/user/pojo/RavenUserInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-api/target/classes/com/raven/security/user/repository/IRavenUserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/user-api/target/classes/com/raven/security/user/repository/IRavenUserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-api/target/classes/com/raven/security/user/service/IRavenUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/user-api/target/classes/com/raven/security/user/service/IRavenUserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-api/target/classes/com/raven/security/user/service/impl/RavenUserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/user-api/target/classes/com/raven/security/user/service/impl/RavenUserServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-api/target/classes/com/raven/security/user/web/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/user-api/target/classes/com/raven/security/user/web/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user-api/target/classes/com/raven/security/user/web/filter/RateLimitFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/user-api/target/classes/com/raven/security/user/web/filter/RateLimitFilter.class" afterDir="false" />
-    </list>
+    <list default="true" id="7dd49a76-964d-468a-8be9-bd98d21ab113" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +37,9 @@
     <option name="vmOptions" value="-DarchetypeCatalog=internal" />
   </component>
   <component name="ProjectId" id="1bmsMeJUwMrfigvcWOZ6MVbbrGM" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
