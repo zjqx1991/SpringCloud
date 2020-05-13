@@ -30,6 +30,7 @@ public class UserController {
         RavenUser user = (RavenUser) request.getAttribute("user");
 
         if(user == null || !user.getId().equals(id)) {
+            log.info("身份认证信息异常，获取用户信息失败");
             throw new RuntimeException("身份认证信息异常，获取用户信息失败");
         }
         log.info("测试请求- " + userInfo);
@@ -39,5 +40,10 @@ public class UserController {
     @GetMapping("/test")
     public void test() {
         log.info("测试请求- test");
+    }
+
+    @PostMapping("/pst")
+    public void test2() {
+        log.info("测试请求- post");
     }
 }

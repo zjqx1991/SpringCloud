@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7dd49a76-964d-468a-8be9-bd98d21ab113" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/user-api/src/main/java/com/raven/security/user/config/RavenInterceptorConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-api/src/main/java/com/raven/security/user/pojo/RavenAuditLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-api/src/main/java/com/raven/security/user/repository/IRavenAuditLogRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-api/src/main/java/com/raven/security/user/service/IRavenAuditLogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-api/src/main/java/com/raven/security/user/service/impl/RavenAuditLogServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-api/src/main/java/com/raven/security/user/web/handler/ErrorHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user-api/src/main/java/com/raven/security/user/web/interceptor/RavenAuditLogInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user-api/src/main/java/com/raven/security/user/web/interceptor/RavenAclInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-api/src/main/java/com/raven/security/user/config/RavenInterceptorConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-api/src/main/java/com/raven/security/user/config/RavenInterceptorConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-api/src/main/java/com/raven/security/user/pojo/RavenUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-api/src/main/java/com/raven/security/user/pojo/RavenUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-api/src/main/java/com/raven/security/user/web/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/user-api/src/main/java/com/raven/security/user/web/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-api/target/classes/com/raven/security/user/pojo/RavenUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/user-api/target/classes/com/raven/security/user/pojo/RavenUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user-api/target/classes/com/raven/security/user/web/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/user-api/target/classes/com/raven/security/user/web/controller/UserController.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
