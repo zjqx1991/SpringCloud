@@ -28,17 +28,4 @@ public class RavenUser {
         BeanUtils.copyProperties(this, userInfo);
         return userInfo;
     }
-
-    public boolean hasPermission(String method) {
-        boolean result = false;
-        if (StringUtils.equalsIgnoreCase("get", method)) {
-            // GET请求的用户必须要有 "r" 权限
-            result = StringUtils.contains(this.permissions, "r");
-        }
-        else {
-            // GET外其他请求的用户必须要有 "w" 权限w
-            result = StringUtils.contains(this.permissions, "w");
-        }
-        return result;
-    }
 }

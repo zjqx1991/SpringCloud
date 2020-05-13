@@ -14,7 +14,9 @@ public interface IRavenUserService {
 
     RavenUserInfo get(Long id);
 
+    RavenUserInfo getByName(String name);
+
     List<RavenUserInfo> query(String name);
 
-
+    RavenUserInfo login(RavenUserInfo userInfo);
 }

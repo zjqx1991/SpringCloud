@@ -1,7 +1,8 @@
 package com.raven.security.user.web.filter;
 
-import com.raven.security.user.pojo.RavenUser;
-import com.raven.security.user.repository.IRavenUserRepository;
+import com.raven.security.user.config.RavenAllowsUrlConfig;
+import com.raven.security.user.pojo.RavenUserInfo;
+import com.raven.security.user.service.IRavenUserService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,7 @@ import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 
@@ -26,12 +28,21 @@ import java.io.IOException;
 public class AuthenticationFilter extends OncePerRequestFilter {
 
     @Autowired
-    private IRavenUserRepository userRepository;
+    private IRavenUserService userService;
+    @Autowired
+    private RavenAllowsUrlConfig allowsUrlConfig;
 
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
-        logger.info("2-认证过滤器");
-        String header = request.getHeader("Authorization");
 
+        logger.info("2-认证过滤器");
+
+        // 直接放行
+        if (this.allowsUrlConfig.getAllowList().contains(request.getRequestURI())) {
+            filterChain.doFilter(request, response);
+            return;
+        }
+
+        String header = request.getHeader("Authorization");
         if (StringUtils.isNotBlank(header)) {
             String token64 = StringUtils.substringAfter(header, "Basic ");
             String token = new String(Base64Utils.decodeFromString(token64));
@@ -43,11 +54,21 @@ public class AuthenticationFilter extends OncePerRequestFilter {
             }
             String username = items[0];
             String password = items[1];
-            RavenUser user = this.userRepository.findByName(username);
-            if (user != null && user.getPassword().equals(password)) {
-                request.setAttribute("user", user);
+            RavenUserInfo userInfo = this.userService.getByName(username);
+            if (userInfo != null && userInfo.getPassword().equals(password)) {
+                request.getSession().setAttribute("user", userInfo);
+                request.getSession().setAttribute("temp", "yes");
             }
         }
-        filterChain.doFilter(request, response);
+
+        try {
+            filterChain.doFilter(request, response);
+        }
+        finally {
+            HttpSession session = request.getSession();
+            if (session.getAttribute("temp") != null) {
+                session.invalidate();
+            }
+        }
     }
 }
